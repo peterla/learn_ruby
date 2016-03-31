@@ -14,7 +14,7 @@ def translate_word(word)
   # num_starting_consonants = 0
 
   word.size.times do |index|
-    if is_a_vowel(word[index])
+    if word[index] =~ /[aeiou]/
       case index
       when 0 # 0 consonants to start
 
@@ -61,14 +61,4 @@ def translate_word(word)
 
   # 1 letter pattern
 
-end
-
-# Returns true if the character passed in is a vowel, false otherwise
-# Assumes char is one character
-def is_a_vowel(char)
-  if (char =~ /[aeiou]/)
-    return true
-  else
-    return false
-  end
 end
